@@ -1,0 +1,29 @@
+.bulk-image-compression {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bulk-image-compression h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.bulk-image-upload {
+    margin: 20px 0;
+}
+
+.bulk-image-compression button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bulk-image-compression button:hover {
+    background-color: #45a049;
+}
