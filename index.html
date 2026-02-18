@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Image Compression Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bulk Image Compression Tool</h1>
+            <button id="mode-toggle">Toggle Dark/Light Mode</button>
+        </header>
+        <main>
+            <section>
+                <h2>Drag and Drop</h2>
+                <div id="drop-area">
+                    <p>Drag and drop your images here</p>
+                </div>
+            </section>
+            <section>
+                <h2>File Upload</h2>
+                <input type="file" id="fileElem" multiple accept="image/*">
+                <label for="fileElem">Choose files</label>
+            </section>
+            <section>
+                <h2>URL Input</h2>
+                <input type="text" id="urlInput" placeholder="Enter image URL">
+            </section>
+            <section>
+                <h2>Progress</h2>
+                <div id="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </section>
+            <button id="compress-button">Compress</button>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
