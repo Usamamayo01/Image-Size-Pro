@@ -1,73 +1,79 @@
-# ImageSizePro - Bulk Image Compression Tool
-
-## Description
-A powerful bulk image compression tool that optimizes images for better website performance.
-
-## Core Features
-- Batch processing of images.
-- Lossless compression.
-- User-friendly interface.
-- Support for various image formats.
-
-## Requirements
-- Node.js v14 or higher.
-- npm v6 or higher.
+# Image Size Pro
 
 ## Installation Instructions
-1. Clone the repository:  
-   `git clone https://github.com/Usamamayo01/Image-Size-Pro.git`  
-2. Navigate into the project folder:  
-   `cd Image-Size-Pro`  
-3. Install dependencies:  
-   `npm install`
 
-## Usage Instructions
-To start the image compression process:  
-`node compress.js [input-directory] [output-directory]`
+To install the Image Size Pro project, follow these steps:
 
-## API Endpoints
-- `POST /compress` - Compress images.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Usamamayo01/Image-Size-Pro.git
+   cd Image-Size-Pro
+   ```
 
-## Configuration
-Modify the `config.json` file to set your compression preferences.
+2. **Install dependencies**:
+   Ensure you have [Node.js](https://nodejs.org/) installed. Then run:
+   ```bash
+   npm install
+   ```
+
+3. **Environment Configuration**:
+   Create a `.env` file in the root directory and add the necessary environment variables:
+   ```
+   # Example
+   API_KEY=your_api_key_here
+   ```
+
+## Usage Guide
+
+To start the application locally, run:
+```bash
+npm start
+```
+
+You can then access the application in your web browser at `http://localhost:3000`.
 
 ## Deployment to Vercel
-1. Sign in to Vercel.
-2. Create a new project.
-3. Import from GitHub repository.
-4. Configure environment variables if necessary.
-5. Deploy the project.
 
-## Advanced Configuration
-Refer to the `advanced-config.md` file for detailed configurations.
+To deploy the project to Vercel, follow these steps:
 
-## Performance Metrics
-Monitor compression ratios and speed.
+1. **Sign up or log in** at [Vercel](https://vercel.com/).
+2. **Import your GitHub repository**:
+   * Go to the Vercel dashboard.
+   * Click on "New Project" and select your `Image-Size-Pro` repository.
+3. **Configure Project Settings**:
+   * Set any environment variables required for your application.
+4. **Deploy**:
+   * Click the "Deploy" button and wait for the build process to complete.
+
+## Features
+- Upload images and get their dimensions.
+- Real-time image size display.
+- Support for various image formats (JPEG, PNG, GIF).
+- Responsive design for mobile and desktop.
+- User-friendly interface.
+
+## API Endpoints
+1. `POST /api/upload`
+   - Upload an image to obtain its size.
+   - **Parameters**: `file` (binary - the image file)
+
+2. `GET /api/size`
+   - Retrieve the size of a previously uploaded image.
+   - **Parameters**: `imageId` (string - the ID of the image)
 
 ## Troubleshooting
-- Issue: Images not compressing properly.  
-  Solution: Check the input format and ensure it is supported.
+- **Error: `API_KEY not found`**: Ensure that you have correctly set your API key in the `.env` file.
+- **Image uploads failing**: Check file size limits and format compatibility.
+- **Deployment issues**: Review the error logs in the Vercel dashboard for insights.
 
-## Browser Support
-Compatible with all modern browsers including Chrome, Firefox, Safari, and Edge.
+## Project Structure
+- `src/` - Contains the source code for the application.
+  - `components/` - React components.
+  - `pages/` - Next.js pages.
+  - `styles/` - Global and component-specific styles.
+- `public/` - Static files such as images and icons.
+- `.env` - Environment variable configuration file.
+- `package.json` - Project metadata and dependencies file.
+- `README.md` - Project documentation.
 
-## Security Features
-- Input validation to prevent injection attacks.
-
-## Performance Optimization
-Suggestions for optimizing image load speeds.
-
-## Contributing Guidelines
-1. Fork the repo.
-2. Create a feature branch.
-3. Submit a pull request.
-
-## License
-This project is licensed under the MIT License.
-
-## Future Enhancements
-- Add support for additional image formats.
-- Implement user authentication.
-
-## Support Information
-For support, please raise an issue on GitHub or contact the maintainer.
+For more information, feel free to reach out to the project maintainers.
